@@ -1,11 +1,17 @@
 package com.cjtorgerson;
 
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello and welcome!");
+import java.io.IOException;
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
+public class Main {
+    public static void main(String[] args) throws IOException {
+
+        Deck deck = new Deck();
+        deck.shuffle();
+        System.out.println(deck.cards.size());
+        for (int i = 0; i < 52; i++) {
+            System.out.println(deck.draw().toString());
         }
+        System.out.println(deck.cards.size());
+
     }
 }

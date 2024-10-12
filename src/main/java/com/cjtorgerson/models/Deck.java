@@ -1,13 +1,12 @@
-package com.cjtorgerson;
+package com.cjtorgerson.models;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Deck {
 
-    LinkedList<Card> cards;
+    public LinkedList<Card> cards;
 
     public Deck() throws IOException {
         cards = new LinkedList<>();

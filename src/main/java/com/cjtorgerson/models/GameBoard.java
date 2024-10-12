@@ -1,4 +1,4 @@
-package com.cjtorgerson;
+package com.cjtorgerson.models;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,6 +24,7 @@ public class GameBoard {
     ArrayList<Stack<Card>> piles;
     ArrayList<Stack<Card>> foundations;
     Queue<Card> stock;
+    Queue<Card> flippedFromStock; // max length 3
 
     public GameBoard() throws IOException {
         deck = new Deck();
@@ -31,6 +32,7 @@ public class GameBoard {
         piles = new ArrayList<>();
         foundations = new ArrayList<>();
         stock = new LinkedList<>();
+        flippedFromStock = new LinkedList<>();
 
         // Fill the piles
         for (int i = 1; i < 8; i++) {

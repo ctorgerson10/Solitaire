@@ -1,4 +1,4 @@
-package com.cjtorgerson;
+package com.cjtorgerson.models;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -7,23 +7,21 @@ import java.io.InputStream;
 
 public class Card {
 
-    int number;
-    String stringNumber;
-    String suit;
-    boolean faceUp;
-    int height, width;
-    BufferedImage front;
-    BufferedImage back;
-    BufferedImage currentFace;
+    public String stringNumber;
+    public String suit;
+    public boolean faceUp;
+    public int height, width;
+    public BufferedImage front;
+    public BufferedImage back;
+    public BufferedImage currentFace;
 
     public Card(int num, String cardSuit) throws IOException {
         height = 62;
         width = 84;
-        number = num;
         stringNumber = num > 10 ? getRoyal(num) : Integer.toString(num);
         suit = cardSuit;
         faceUp = false;
-        try (InputStream frontStream = getClass().getClassLoader().getResourceAsStream("CardSprites/" + suit + "/" + number + ".png")) {
+        try (InputStream frontStream = getClass().getClassLoader().getResourceAsStream("CardSprites/" + suit + "/" + num + ".png")) {
             if (frontStream != null) {
                 front = ImageIO.read(frontStream);
             }

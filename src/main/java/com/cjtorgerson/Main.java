@@ -1,5 +1,9 @@
 package com.cjtorgerson;
 
+import com.cjtorgerson.models.Deck;
+import com.cjtorgerson.models.Card;
+import com.cjtorgerson.models.GameBoard;
+
 import java.io.IOException;
 
 public class Main {

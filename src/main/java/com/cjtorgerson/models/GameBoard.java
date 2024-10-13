@@ -41,7 +41,5 @@ public class GameBoard {
                 piles.get(i-1).add(deck.draw());
             }
         }
-
     }
-
 }

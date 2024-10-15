@@ -1,12 +1,16 @@
 package com.cjtorgerson.models;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class GameBoard {
+public class GameBoard extends JPanel implements KeyListener {
     /*
     * To set up a game of Klondike solitaire, you need to shuffle a standard 52-card deck and remove the jokers:
     * Deal the cards into seven piles from left to right, with each pile containing one more card than the last.
@@ -35,11 +39,25 @@ public class GameBoard {
         flippedFromStock = new LinkedList<>();
 
         // Fill the piles
-        for (int i = 1; i < 8; i++) {
-            piles.add(new Stack<>());
-            for (int j = 0; j < i; j++) {
-                piles.get(i-1).add(deck.draw());
-            }
-        }
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        ;
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        ;
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        ;
     }
 }

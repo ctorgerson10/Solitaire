@@ -3,6 +3,7 @@ package com.cjtorgerson;
 import com.cjtorgerson.models.Deck;
 import com.cjtorgerson.models.Card;
 import com.cjtorgerson.models.GameBoard;
+import com.cjtorgerson.models.SolitaireGame;
 
 import java.io.IOException;
 
@@ -11,11 +12,7 @@ public class Main {
 
         Deck deck = new Deck();
         deck.shuffle();
-        System.out.println(deck.cards.size());
-        for (int i = 0; i < 52; i++) {
-            System.out.println(deck.draw().toString());
-        }
-        System.out.println(deck.cards.size());
+        new SolitaireGame();
 
     }
 }
